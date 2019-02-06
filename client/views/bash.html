@@ -1,0 +1,218 @@
+<template name="bash">
+  <div class="row tech-bg"> <!--Beginning of row div-->
+      <div id="bash-intro" class="section scrollspy tech-text-padding">
+        <h1>Bash</h1>
+        <p class="small-font">
+          When you open up your <span class="bold">terminal</span>, it will run a shell.
+          This is a program that can interpret commands given to your terminal. You
+          will be using <span class="bold">Bash</span>, which is a typical shell for
+          Unix and Unix-based operating systems (OS) like yours. If this sounds like
+          nonsense, don't worry! Bash simply allows you to access your computer without
+          the pretty graphical user interface (GUI)! Lets look at an example. Here is
+          a Desktop shown through a pretty GUI: <img src="/desktop.png" alt="desktop.png">
+          Here is the same Desktop shown through a terminal window running bash:
+          <img src="/terminal.png" alt="terminal.png">
+        </p>
+      </div>
+      <hr class="line-90">
+
+      <div id="nyfs" class="section scrollspy tech-text-padding">
+        <h2>Navigating your file system</h2>
+        <p class="small-font">
+          Open up a terminal window. Either type "terminal" into your search bar, or
+          open your "Utilities" (folder which is in "Applications"). Type
+          <span class="gold-text purple-bg">&nbsp;ls&nbsp;</span> and hit the return
+          key. A list of <span class="bold">directories</span> should display in the
+          window. Note that the term "directory" in reference to a terminal shell is
+          analagous to the term "folder" when navigating file systems in your MacBook's
+          GUI. Among the list of directories should be one called Desktop. Now type
+          <span class="gold-text purple-bg">&nbsp;cd Desktop&nbsp;</span> into your
+          command line. Make sure to capitalize the D in Desktop exactly like the directory
+          name is listed on your screen; Bash commands are case-sensitive. You are
+          now in the Desktop directory. Type <span class="gold-text purple-bg">&nbsp;ls&nbsp;</span>
+          to see its contents. Try it again, but this time, only type the first
+          few letters of the directory name. Then hit the tab key to magically
+          autofill the rest of it. This is called "tab completion." Pick a directory
+          to cd into, then view its contents with ls. Congratulations! You now
+          know how to step into directories and view their contents. At this point,
+          we should discuss paths.
+        </p>
+      </div>
+      <hr class="line-90">
+
+      <div id="fadp" class="section scrollspy tech-text-padding">
+        <h2>File and directory paths</h2>
+        <p class="small-font">
+          A file path is a description of the location of a specific file. In other words:
+          the sequence of directories would you need to step through to find the given
+          file.The term directory path has an analogous definition, where the location
+          describes the route to a specific directory instead of a file. Type in
+          <span class="gold-text purple-bg">&nbsp;pwd&nbsp;</span>, which stands for
+          "present working directory." Bash should have returned something that looks
+          <span class="italic-text">similar</span> to this: <br> <img src="/pwd.png" alt="pwd.png">
+          <br> In the case of the above image, pwd returns the path to the directory
+          named phamerator, which is located inside my Desktop directory, which is
+          inside a directory named Ben (which is <span class="italic-text">my</span>
+          home directory), which is inside the directory named Users, which is inside
+          my computer's root directory. You may be wondering, where does bash list
+          the root directory in that path? Good question. The first / in the returned
+          path denotes the root directory. This might make more sense if you try it
+          yourself. <br>
+          1. Type <span class="gold-text purple-bg">&nbsp;cd /&nbsp;</span> into your
+          command line. You are now at the root of your file system. Feel free to inspect
+          its contents (using ls) and confirm your location (with pwd). <br>
+          2. cd into your Users folder <br>
+          3. cd into the folder with your name on it <br>
+          4. cd into Desktop <br>
+          Step 1 brought you to your root directory which is represented by the / with
+          nothing trailing or following it. Step 3 brought you to your home directory,
+          which is where all of <span class="italic-text">your</span> user files will
+          be kept. <br>
+          Now look back at the directory path that you acquired when you typed in pwd
+          for the first time. This is known as an <span class="bold-text">absolute path</span>
+          because the entire path &mdash; beginning from the root of the computer's
+          file system &mdash; is explicitly listed. By contrast, a
+          <span class="bold-text">relative path</span> describes location relative to
+          some reference point. You have been using relative paths with the cd command
+          this entire time. When you stepped into your Desktop directory earlier, you
+          did not need to type
+          <span class="gold-text purple-bg">&nbsp;cd /Users/Username/Desktop&nbsp;</span>
+          (replace "Username" with the name of your user account on your MacBook). Instead,
+          you simply typed <span class="gold-text purple-bg">&nbsp;cd Desktop&nbsp;</span>.
+          This worked because the Desktop directory was contained within the current
+          directory and bash commands like cd check for this. Alternatively, if you
+          had typed <span class="gold-text purple-bg">&nbsp;cd ./Desktop&nbsp;</span>,
+          the result would have been identical. This is because the . before the / refers
+          to the current directory (AKA the present working directory)! So in
+          <span class="gold-text purple-bg">&nbsp;cd Desktop&nbsp;</span>,
+          the ./ is implicitly included. Then why bother remembering this? Because it
+          will help you understand the ../ command. If you type
+          <span class="gold-text purple-bg">&nbsp;cd ..&nbsp;</span>, bash will step
+          backwards out of the current directory into the previous one. So if you are
+          in your Desktop directory, but want to step out of it, then into your Applications
+          directory, you can type <span class="gold-text purple-bg">&nbsp;cd ../Applications&nbsp;</span>.
+          These concepts are important to relative paths and general navigation. It
+          is strongly recommended that you try this yourself and play around with these
+          file navigation commands to acquaint yourself with the notion of both kinds
+          of file paths. A helpful tip: if you decide to use an absolute path, you can
+          access the specified file or directory from ANY location. While this is
+          possible with relative paths, it may require you to backtrack multiple
+          steps which can be confusing. You can also include filepaths after the
+          ls command (absolute and relative) to list the contents of distant directories.
+        </p>
+      </div>
+      <hr class="line-90">
+
+      <div id="flags" class="section scrollspy tech-text-padding">
+        <h2>Flags</h2>
+        <p class="small-font">
+          Most bash commands can be modified with something called a flag. For instance,
+          type <span class="gold-text purple-bg">&nbsp;ls -a /&nbsp;</span> into the
+          command line and hit the return key. You just used the -a flag (which stands
+          for "all") to tell the ls command to list any hidden files and directories
+          contained within the given directory (the root directory in this case) in
+          addition to the rest of its contents. In macOS, hidden files and directories
+          contain a trailing . before their name. Now use the
+          <span class="gold-text purple-bg">&nbsp;clear&nbsp;</span> command, then type
+          in <span class="gold-text purple-bg">&nbsp;ls -l /&nbsp;</span>. The -l flag
+          stands for "long list" and will provide extra information about the directories/files
+          therein, such as permissions, owner, and the time of the last modification.
+          Multiple flags can be used simultaneously. For example,
+          <span class="gold-text purple-bg">&nbsp;ls -a -l&nbsp;</span> will (1) list
+          hidden contents and (2) display information on all of the listings as discussed
+          above. It is also possible to roll multiple flags into one.
+          <span class="gold-text purple-bg">&nbsp;ls -al&nbsp;</span> would produce
+          the same result. However, in the interest of conceptually separating the effects
+          of individual flags, it is recommended that you employ the former method for the time being.
+        </p>
+      </div>
+      <hr class="line-90">
+
+      <div id="cheat-sheet" class="section scrollspy tech-text-padding">
+        <h2>Cheat sheet</h2>
+        <p class="small-font">
+          <table>
+            <th>Helpful commands</th>
+            <tr>
+              <td>cd</td>
+              <td>Change directory to home directory</td>
+            </tr>
+            <tr>
+              <td>cd directory_path</td>
+              <td>Change directory to specified directory</td>
+            </tr>
+            <tr>
+              <td>ls</td>
+              <td>List contents of current directory</td>
+            </tr>
+            <tr>
+              <td>ls directory_path</td>
+              <td>List contents of specified directory</td>
+            </tr>
+            <tr>
+              <td>ls -a</td>
+              <td>List all contents of current directory, including hidden files/directories</td>
+            </tr>
+            <tr>
+              <td>ls -a directory_path</td>
+              <td>List all contents of specified directory, including hidden files/directories</td>
+            </tr>
+            <tr>
+              <td>pwd</td>
+              <td>Print the name of the directory</td>
+            </tr>
+            <tr>
+              <td>less file_name</td>
+              <td>Display contents of the specified file</td>
+            </tr>
+            <tr>
+              <td>man command_name</td>
+              <td>Display the informational manual for the specified command</td>
+            </tr>
+            <tr>
+              <td>Command + N</td>
+              <td>Open new terminal window</td>
+            </tr>
+            <tr>
+              <td>Command + L</td>
+              <td>Clear the window; identical to inputting the word clear</td>
+            </tr>
+            <tr>
+              <td>Control + C</td>
+              <td>Cancel the current process</td>
+            </tr>
+          </table>
+        </p>
+      </div>
+      <hr class="line-90">
+
+      <div id="bash-conclusion" class="section scrollspy tech-text-padding">
+        <h2>Concluding remarks</h2>
+        <p class="small-font">
+          The command line can be intimidating, and there is a still a surplus of useful
+          commands to learn (of which a few shall be examined in upcoming sections).
+          However, what is listed on this page should mostly suffice for the purposes
+          of this lab.
+        </p>
+      </div>
+    </div>
+
+    <!--Display TOC on right side-->
+    <div class="col hide-on-med-and-down s6 m2 l1 xl10">
+      <div class="toc-wrapper pinned">
+        <ul class="section table-of-contents margin-r15">
+          <li><a href="#bash-intro" class="white-text">Introduction</a></li>
+          <li><a href="#nyfs" class="white-text">Navigating your file system</a></li>
+          <li><a href="#fadp" class="white-text">File and directory paths</a></li>
+          <li><a href="#flags" class="white-text">Flags</a></li>
+          <li><a href="#cheat-sheet" class="white-text">Cheat sheet</a></li>
+          <li><a href="#bash-conclusion" class="white-text">Concluding remarks</a></li>
+        </ul>
+        <div class="center">
+          <p class="white-text flow-text roboto quote">"The day you stop learning is
+            the day you stop living." <br> -Albert Einstein</p>
+        </div>
+        <a href="/technology/basics" class="waves-effect waves-light btn-large gold-bg center">Continue</a>
+      </div>
+  </div>  <!--End of row div-->
+</template>

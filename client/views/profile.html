@@ -1,0 +1,151 @@
+<template name="profile">
+    <div id="account-bg">
+
+      {{> accountInfo}}
+      <ul class="collapsible">
+        <li>
+          <div class="collapsible-header purple-text"><i class="material-icons">portrait</i>Edit Account Information</div>
+          <div class="collapsible-body purplish-bg">
+            {{> editAccount}}
+          </div>
+        </li>
+        <li>
+          <div class="collapsible-header purple-text"><i class="material-icons">place</i>Lesson Plan Progress</div>
+          <div class="collapsible-body purplish-bg">
+            {{> lessonPlanProgress}}
+          </div>
+        </li>
+        <li>
+          <div class="collapsible-header purple-text"><i class="material-icons">event</i>Request Appointment</div>
+          <div class="collapsible-body purplish-bg"><span>Use Materialize Pickers</span></div>
+        </li>
+        <li>
+          <div class="collapsible-header purple-text"><i class="material-icons">settings</i>Reset Password</div>
+          <div class="collapsible-body purplish-bg">
+            {{> resetPassword}}
+          </div>
+        </li>
+      </ul>
+    </div>
+    <p class="white-text flow-text roboto" style="font-size: 20px;">“The more that
+      you read, the more things you will know, the more that you learn, the more
+      places you’ll go." <br> - Dr. Seuss
+    </p>
+</template>
+
+<template name="accountInfo">
+  <ul class="small-font purple-text" >
+    <br>
+    <li class="profile-margins">
+      <span class="bold-text">Username:</span> {{ username }} &nbsp;
+    </li>
+    <li class="profile-margins">
+      <span class="bold-text">Email:</span> {{ email }} &nbsp;
+    </li>
+    <li class="profile-margins">
+      <span class="bold-text">Member Type:</span>
+      <span id="member"> {{ memberType}} &nbsp; </span>
+    </li>
+    <li class="profile-margins">
+      <span class="bold-text">Contract term:</span>
+      <span id="contract"> {{ startDate }} - {{ endDate }} &nbsp; </span>
+    </li>
+  </ul>
+</template>
+
+<template name="editAccount">
+
+  <div class="input-field col s12">
+    <input id="edit-username" type="text" class="validate account-input">
+    <label class="white-text" for="edit-username">New Username</label>
+  </div>
+
+  <div class="input-field col s12">
+    <input id="edit-email" type="email" class="validate account-input">
+    <label class="white-text" for="edit-email">New Email</label>
+  </div>
+
+  <div class="input-field col s12">
+    <select id="edit-member">
+      <option style="color:white; background-color:white;" value="" disabled selected>Choose a type</option>
+      <option value="Student Researcher">Student Researcher</option>
+      <option value="Summer Hire">Summer Hire</option>
+      <option value="Wage Employee">Wage Employee</option>
+      <option value="Non-affiliated">Non-affiliated</option>
+    </select>
+  </div>
+  <div class="row">
+    <div class="input-field col s6">
+      <input id="start-date" type="text" class="col s12 datepicker account-input">
+      <label class="white-text" for="start-date">&ensp; Start Date</label>
+    </div>
+
+    <div class="input-field col s6">
+      <input id="end-date" type="text" class="col s12 datepicker account-input">
+      <label class="white-text" for="end-date">&ensp; End Date</label>
+    </div>
+  </div>
+  <button id="info-btn" class="waves-light btn-large gold-bg" type="submit">Confirm</button>
+</template>
+
+<template name="lessonPlanProgress">
+  <form action="#">
+    <p><label>
+        <input id="bash-checkbox" class="lesson-plan" type="checkbox"/><span class="white-text">Bash</span>
+      </label>
+    </p>
+    <p>
+      <label>
+        <input id="basics-checkbox" class="lesson-plan" type="checkbox"/><span class="white-text">basics</span>
+      </label>
+    </p>
+    <p>
+      <label>
+        <input id="hcj-checkbox" class="lesson-plan" type="checkbox"/><span class="white-text">HTML, CSS, and JS</span>
+      </label>
+    </p>
+    <p>
+      <label>
+        <input id="lib-checkbox" class="lesson-plan" type="checkbox"/><span class="white-text">Libraries</span>
+      </label>
+    </p>
+    <p>
+      <label>
+        <input id="mongo-checkbox" class="lesson-plan" type="checkbox"/><span class="white-text">MongoDB</span>
+      </label>
+    </p>
+    <p>
+      <label>
+        <input id="meteor-checkbox" class="lesson-plan" type="checkbox"/><span class="white-text">Meteor</span>
+      </label>
+    </p>
+    <p>
+      <label>
+        <input id="ide-checkbox" class="lesson-plan" type="checkbox"/><span class="white-text">IDEs</span>
+      </label>
+    </p>
+    <p>
+      <label>
+        <input id="vc-checkbox" class="lesson-plan" type="checkbox"/><span class="white-text">Version Control</span>
+      </label>
+    </p>
+  </form>
+</template>
+
+<template name="resetPassword">
+  <div class="row">
+    <div class="input-field col s12">
+      <input style="background-color: rgb(50,30,145,0.1); border-style:" id="old-password" type="password" class="validate account-input">
+      <label class="white-text" for="old-password">Current password</label>
+    </div>
+    <div class="input-field col s12">
+      <input id="new-password" type="password" class="validate account-input">
+      <label class="white-text" for="new-password">New Password</label>
+    </div>
+    <div class="input-field col s12">
+      <input id="retype-password" type="password" class="validate account-input">
+      <label class="white-text" for="retype-password">Retype New Password</label>
+    </div>
+  </div>
+  <button id="reset-btn" class="waves-light btn-large gold-bg" type="submit">Confirm</button>
+</template>

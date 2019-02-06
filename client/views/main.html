@@ -1,0 +1,71 @@
+<head>
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+</head>
+
+<template name="background">
+  <div class="background"> <!--Start of background div-->
+      {{> navbar}}
+    <div class="background-contents">
+      {{> yield "main"}}
+    </div>
+  </div> <!--End of background div-->
+  {{> extrabackground}}
+</template>
+
+<template name="navbar">
+  <div class="navbar-fixed">
+    <ul id="dropdown" class="dropdown-content">
+      <li class="divider white"></li>
+      <li><a class="dd-text" href="/technology/bash">Bash</a></li>
+      <li class="divider"></li>
+      <li><a class="dd-text" href="/technology/basics">Programming Fundamentals</a></li>
+      <li class="divider"></li>
+      <li><a class="dd-text" href="/technology/languages">HTML, CSS, and JS</a></li>
+      <li class="divider"></li>
+      <li><a class="dd-text" href="/technology/libraries">Libraries</a></li>
+      <li class="divider"></li>
+      <li><a class="dd-text" href="#">MongoDB</a></li>
+      <li class="divider"></li>
+      <li><a class="dd-text" href="#">Meteor</a></li>
+      <li class="divider"></li>
+      <li><a class="dd-text" href="#">IDEs</a></li>
+      <li class="divider"></li>
+      <li><a class="dd-text" href="#">Version Control</a></li>
+    </ul>
+    {{#if currentUser}}
+      <nav id="nav">
+        <div class="nav-wrapper menu">
+          <ul id="nav-content" class="left fade-in">
+            <li><a id="home" class="bold-text" href="/"><i class="material-icons left">fingerprint</i>LabTut</a></li>
+            <li><a id="profile" href="/profile">{{ username }}</a></li>
+            <!-- Dropdown Trigger -->
+            <li><a class="dropdown-trigger" href="#" data-target="dropdown">Technologies & Topics<i class="material-icons right">expand_more</i></a></li>
+            <li><a href="/about">About Us</a></li>
+          </ul>
+          <ul class="right fade-in hide-on-med-and-down">
+            <li><a id="logout" class="nav-login-logout bold-text underline-text fade-in" href="/">Sign Out</a></li>
+          </ul>
+        </div>
+      </nav>
+    {{else}}
+      <nav id="nav">
+        <div class="nav-wrapper menu">
+          <ul id="nav-content" class="left fade-in">
+            <li><a href="/" class="bold-text"><i class="material-icons left">fingerprint</i>LabTut</a></li>
+            <!-- Dropdown Trigger -->
+            <li><a class="dropdown-trigger" href="#" data-target="dropdown">Technologies & Topics<i class="material-icons right">expand_more</i></a></li>
+            <li><a href="/about">About Us</a></li>
+          </ul>
+          <ul class="right fade-in hide-on-med-and-down">
+            <li><a class="nav-login-logout bold-text underline-text" href="/login">Sign In</a></li>
+          </ul>
+        </div>
+      </nav>
+    {{/if}}
+  </div>
+</template>
+
+<template name="extrabackground">
+  <div class="section grey darken-2" style="height: 500px;">
+  </div>
+</template>

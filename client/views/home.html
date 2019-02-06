@@ -1,0 +1,22 @@
+<template name="home">
+    <h1>Welcome to LabTut!</h1>
+    <p>Our goal is to get you acquainted with the <span class="gold-text">Cresawn lab</span>! Click the button below to commence your lesson plan! </p>
+    {{#if currentUser}}
+      <a id="start-btn" class="waves-effect waves-light btn-large gold-bg" href="/technology">Begin</a>
+    {{else}}
+      <a id="start-btn" class="waves-effect waves-light btn-large gold-bg btn-disabled" href="/login">Begin</a>
+    {{/if}}
+    <div class="row" >
+    <div class="col s12 m6 right" >
+      <div class="card blue-grey darken-1" style="top: 450px; right: -25px;">
+        <div class="card-content white-text">
+          <span class="card-title">Phamerator</span>
+          <p>Brief synopsis of phamerator</p>
+        </div>
+        <div class="card-action">
+          <a href="phamerator.org">phamerator.org</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</template>

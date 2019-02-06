@@ -1,0 +1,17 @@
+<template name="login">
+  {{#unless currentUser}}
+    <div id="login-bg">
+      {{> loginButtons}}
+      <div class="row additional-links-margins fade-in">
+        <a class="bold-text" href="/login/createaccount">Create Account</a><br>
+        <a class="bold-text" href="/login/forgotpassword">Forgot Password</a>
+      </div>
+      <button id="login-btn" class="waves-effect waves-light btn-large gold-bg fade-in" type="submit">Submit</button>
+    </div>
+    <p class="white-text flow-text roboto">"I have no special talent. I am only
+      passionately curious."<br> &ensp; -Albert Einstein
+    </p>
+  {{else}}
+    {{> home}}
+  {{/unless}}
+</template>

@@ -1,0 +1,984 @@
+<template name="basics">
+  <div class="row tech-bg"> <!--Beginning of row div-->
+        <div id="basics-intro" class="section scrollspy tech-text-padding">
+          <h1>Programming Fundamentals</h1>
+          <p class="small-font">
+            Object-oriented programming (OOP) is a paradigm that focuses on the
+            creation and use of objects, their states, and behaviors. Before we
+            discuss OOP any further, we should first discuss more basic structures
+            and principles. Create an account on
+            <a href="http://repl.it" target="_blank">repl.it</a>. Fill out your
+            profile (or click the "skip" link), then hit the "Start Coding Now"
+            button. In the search bar, look up "Java" then click on the first result.
+            You should be directed to a page that looks like this:
+            The box outlined in red is where you will write your code, and the box
+            outlined in blue will display it's output.
+            <img src="/repl.png" alt="repl.png">
+            Right now, the concepts you will learn are more important than the
+            language. Java is merely a vehicle in this tutorial. It is strongly
+            recommended that you emulate any examples given.
+          </p>
+        </div>
+        <hr class="line-90">
+
+        <div id="variables" class="section scrollspy tech-text-padding">
+          <h2>Variables</h2>
+          <p class="small-font">
+            Click the green "Run" button above the box that is outlined in red in
+            the above image. In the box outlined blue, you should see some output
+            that looks like this: <img src="/hello_output.png" alt="hello_output.png">
+            Notice the contents inside of the green box. That corresponds to this
+            code: <img src="/hello_code.png" alt="hello_code.png"> Line 3 makes use
+            of what is known as a "print statement." This is what is responsible
+            for producing the output in the green box.
+            <span class="gold-text purple-bg">&nbsp;System.out.println("Hello world!");&nbsp;</span>
+            prints the contents of the parentheses to the console. Go ahead
+            and try it! Replace <span class="gold-text purple-bg">&nbsp;"Hello world!"&nbsp;</span>
+            with whatever you would like. Be sure to include enveloping double quotes
+            though. Now, just above line 3, insert the code <br>
+            <span class="gold-text purple-bg">&nbsp;String myVar;&nbsp;</span>.
+            Congratulations on declaring your first variable! Replace the contents
+            of the print statement's parentheses with your variable's name. Your
+            code should look like this: <img src="/declare_variable.png" alt="declare_variable.png">
+            Now click the "Run" button to run your code. Notice that your console
+            returns a red error message. This is because there is nothing
+            stored inside of myVar. The message is telling you that you
+            have not initialized your variable, but you are asking the console to
+            print whatever is store in myVar.
+            <span class="gold-text purple-bg">&nbsp;myVar = "Hello world!";&nbsp;</span>
+            below the line where you declared myVar. The
+            <span class="gold-text purple-bg">&nbsp;=&nbsp;</span> operator assigns
+            the material on the right side of it to the variable named on its left.
+            Now run your code again. The console should print "Hello world!" just
+            as it did in the green box earlier. If you would like, you can combine
+            declaration and initialization of your variable into a single line,
+            which looks like this: <br>
+            <img src="/combined_variable.png" alt="combined_variable.png"> <br>
+            However, variable declaration and variable initialization are separate
+            concepts. To emphasize this distinction, I recommend you declare and
+            intialize variables on separate lines for practice (at least until you
+            graduate from LabTut). Note that variable declaration must always come
+            before initialization. This is because programs execute sequentially
+            top-to-bottom, line by line. Now that you know a variable simply stores
+            values, we should talk about what types of values you can store.
+          </p>
+        </div>
+        <hr class="line-90">
+
+        <div id="types" class="section scrollspy tech-text-padding">
+          <h2>Data Types</h2>
+          <p class="small-font">
+            Java is a strongly-typed language, meaning that you must provide the
+            <span class="bold-text">data type</span> (hereforth referred to as a "type")
+            of a variable when you declare it. A variable's type determines the
+            contents it can store. For example, a variable of type
+            <span class="gold-text purple-bg">&nbsp;int&nbsp;</span> can only
+            hold integers. In the previous section, you declared a
+            <span class="bold-text">String</span> variable (named myVar) that held
+            the <span class="gold-text purple-bg">&nbsp;String&nbsp;</span>, <br>
+            <span class="gold-text purple-bg">&nbsp;"Hello World!"&nbsp;</span>.
+            Java supports 8 primitive types. The ones that I recommend you become
+            immediately familiar with right are
+            <span class="bold-text">int</span>, <span class="bold-text">double</span>,
+            and <span class="bold-text">boolean</span>. The difference between a
+            primitive type and a reference type, such as a
+            <span class="gold-text purple-bg">&nbsp;String&nbsp;</span> &mdash; notice
+            that it is capitalized, as is with all reference types &mdash; are the
+            way in which the values are stored in memory. For now, this is not an
+            important detail. We will now talk about each specific type mentioned
+            above. <br>
+            An <span class="gold-text purple-bg">&nbsp;int&nbsp;</span> variable
+            holds integers. A double variable holds decimal numbers. A boolean variable
+            holds one of two value: true or false. Now lets try these out.
+            Below, the line where you declared myVar, declare (1) an
+            <span class="gold-text purple-bg">&nbsp;int&nbsp;</span> variable
+            named intVar, (2) a <span class="gold-text purple-bg">&nbsp;double&nbsp;</span>
+            variable named doubleVar, and (3) a
+            <span class="gold-text purple-bg">&nbsp;boolean&nbsp;</span> variable
+            named boolVar. Then on a separate line, initialize them with values
+            of your choice. Keep in mind that each respective variable will
+            only accept a value that fits the definition of its type! Hint: Leave
+            out the enveloping double quotes! Those are only necassary for
+            <span class="gold-text purple-bg">&nbsp;String&nbsp;</span>s. Your code
+            should look something like this:
+            <img src="/var_tutorial_code.png" alt="var_tutorial_code.png">
+            However, the values for your variables could be different as long as
+            they are appropriate to the type that the variable is declared as. For example,
+            your intVar variable could be initialized to 2005 instead of 100 if
+            you so desire. Now add print statements for each new variable of yours.
+            To do this, use the one from earlier as a template &mdash; but replace
+            myVar with the name of your new variables in each, like this:
+            <img src="/print_statements.png" alt="print_statements.png"> <br>
+            The console should print each variable on a different line. Now change myVar
+            to contain the same number as intVar, but envelop in in double quotes.
+            So if you set intVar as <span class="gold-text purple-bg">&nbsp;100&nbsp;</span>,
+            then set myVar to <span class="gold-text purple-bg">&nbsp;"100"&nbsp;</span>.
+            When you run your code again, you should see the number print twice.
+            It will look identical. However, there is an important difference;
+            the former is a <span class="gold-text purple-bg">&nbsp;String&nbsp;</span>,
+            while the latter is an <span class="gold-text purple-bg">&nbsp;int&nbsp;</span>.
+            We will clarify the significance of this distinction later in the
+            <a href="Classes and Objects">Class and Objects</a> section. You can jump to it by using the content navigator
+            on the right side of the window.
+          </p>
+        </div>
+        <hr class="line-90">
+
+        <div id="literals" class="section scrollspy tech-text-padding">
+          <h2>Literals</h2>
+          <p class="small-font">
+            A <span class="bold-text">literal</span> is a value that is to be
+            interpreted literally -- in other words, exactly as it is written. Lets
+            write code for two variables, If you look back at the previous section,
+            you will find that we have been using these to literals initialize variables.
+            <span class="gold-text purple-bg">&nbsp;100&nbsp;</span> and
+            <span class="gold-text purple-bg">&nbsp;3.14&nbsp;</span> and
+            <span class="gold-text purple-bg">&nbsp;true&nbsp;</span> and
+            <span class="gold-text purple-bg">&nbsp;"Hello world!"&nbsp;</span> <br>
+            are all literals. We can either place the literal values or the variables
+            inside the print statement, but the result will be the same. So why
+            use a variable? The variable can hold a value for future re-use, among
+            other applications. For example, if you needed to use the value
+            <span class="gold-text purple-bg">&nbsp;26.65378201&nbsp;</span>
+            in your code multiple times, you may wish to store the value in a variable
+            and re-use the variable as many times as needed instead of trying to
+            retype the literal over and over. That would be tedious and error prone.
+            Among other uses, variables can be used to track changes to values
+            stored in variables.
+          </p>
+        </div>
+        <hr class="line-90">
+
+        <div id="syntax" class="section scrollspy tech-text-padding">
+          <h2>Syntax</h2>
+          <p class="small-font">
+            The same way that the english language is bound by rules defining sentence
+            structure, code will only compile and run if it is written according
+            to the rules of the specific programming language. For example: in Java,
+            every statement needs to end with a semi-colon. Erase the semi-colon
+            from the end of any statement in your code, then try to run it. Your
+            console will produce another red error message attempting to guide you
+            towards resolution. Often times, these errors can be cryptic. However,
+            somebody has likely run into the same problem. That makes google your
+            best friend. Often times, the exact issue you are encountering has a
+            solution that has been posted online. <br>
+            You MUST know and follow the rules of the language you are programming
+            in. While you are first learning, you may find that some "unsolvable"
+            and "mysterious" issues preventing your code from running are syntactic
+            in nature. We will learn Java's syntax as we continue through the tutorial
+            and given aspects become relevant. For now, just know that every statement
+            must end with a semi-colon.
+          </p>
+        </div>
+      <hr class="line-90">
+
+      <div id="operators" class="section scrollspy tech-text-padding">
+        <h2>Operators</h2>
+        <p class="small-font">
+          Erase everything that you have added, so your code looks like this:
+          <img src="/empty_class.png" alt="empty_class.png">
+          Everything that you write should go within the inner most opening and
+          closing brackets. For now, think of the empty space between them as an
+          "empty template" in which you can inject code. Now create two variables:
+          <span class="gold-text purple-bg">&nbsp;a&nbsp;</span> and
+          <span class="gold-text purple-bg">&nbsp;b&nbsp;</span> which are both
+          <span class="gold-text purple-bg">&nbsp;int&nbsp;</span>s. Initialize
+          them with any (integer) values of your choice. Then write a print statement
+          which adds the two variables. Your code should look very similar (or identical)
+          this: <img src="/add_variables.png" alt="add_variables.png"> <br>
+          You will
+          notice that console outputs the sum of your two variables. In the the
+          example above, it will print 3. The
+          <span class="gold-text purple-bg">&nbsp;+&nbsp;</span> operator adds the values
+          on either side of it. In this case,
+          <span class="gold-text purple-bg">&nbsp;a&nbsp;</span> and
+          <span class="gold-text purple-bg">&nbsp;b&nbsp;</span>. If you would like,
+          you can use literals instead of variables with this operator (and many
+          others). So what is an operator? An <span class="bold-text">operator</span>
+          is a construct that manipulates operands or transforms values. An operand
+          is simply the object of manipulation.
+          Here is a list of Arithematic operators:
+
+          <table>
+            <tr>
+              <td>&nbsp;+</td>
+              <td>
+                <span class="bold-text">Addition</span> adds the values on either side of the operator
+              </td>
+            </tr>
+            <tr>
+              <td>&nbsp;-</td>
+              <td>
+                <span class="bold-text">Subtraction</span> subtracts the value on the right side of the operator from the
+                value on its left
+              </td>
+            </tr>
+            <tr>
+              <td>&nbsp;*</td>
+              <td>
+                <span class="bold-text">Multiplication</span> multiplies the values
+                on either side if the operator
+              </td>
+            </tr>
+            <tr>
+              <td>&nbsp;/</td>
+              <td>
+                <span class="bold-text">Division</span> divides the value of the
+                left side of the operator from the value on its right
+              </td>
+            </tr>
+            <tr>
+              <td>&nbsp;%</td>
+              <td>
+                <span class="bold-text">Modulus</span> returns the remainder of
+                a division operation
+              </td>
+            </tr>
+            <tr>
+              <td>&nbsp;++</td>
+              <td>
+                <span class="bold-text">Incrementing</span> adds 1 to the value
+                of the operand
+              </td>
+            </tr>
+            <tr>
+              <td>&nbsp;--</td>
+              <td>
+                <span class="bold-text">Decrementing</span> subtracts 1 from the
+                value of the operand
+              </td>
+            </tr>
+          </table>
+          <br>
+
+          There are many more operators that serve a variety of other functions.
+          The internet is an extensive educational resource. Use it. The ability
+          to self-help is a rare but crucial skill... and in the world of programming,
+          it is a necessity. Here is a link to a page on
+          <a href="https://www.tutorialspoint.com/java/java_basic_operators.htm" target="_blank">tutorialspoint</a>
+          which you can use to learn more about other kinds of operators. For now,
+          I strongly recommend that you focus on arithematic, relational, and the
+          first three assignment operators listed. Self-help means that you will
+          have to learn about boolean expressions on your own in order to understand
+          relational operators. If this proves too difficult, go on to the next
+          section, and then come back here after completing it. <br>
+          Play around with operators to force different types to interact. What works?
+          What does not? Here is a list of some things for you to try. But don't
+          stop here... experimentation facilitates comprehension! <br>
+          1. Add an int and a double. Do they add? Does the result print as an int
+          or a double? <br>
+          2. Divide an int or double by 0. What happens? <br>
+          3.
+        </p>
+      </div>
+      <hr class="line-90">
+
+      <div id="control-flow" class="section scrollspy tech-text-padding">
+        <h2 >Control Flow</h2>
+        <p>If/Else Statements</p>
+        <p class="small-font">
+          The boolean expression <span class="gold-text purple-bg">&nbsp;a &lt; 5&nbsp;</span>
+          will evaluate to true if <span class="gold-text purple-bg">&nbsp;a&nbsp;</span>
+          is any value less than 5. Otherwise, it will evaluate to false. You can
+          verify this with a print statement. So how is this useful? We can make
+          chunks of code execute conditionally using an
+          <span class="bold-text">if/else statement</span>. Inspect the following
+          code. <br>
+          <img src="/if.png" alt="if.png"> <br>
+          Lines 6-8 demonstrate the structure of an "if statement" (which is essentially
+          just half of an if/else statement). Line 6 uses the keyword
+          <span class="gold-text purple-bg">&nbsp;if&nbsp;</span> followed by open
+          and closed parentheses. A <span class="bold-text">keyword</span> is a
+          word that is reserved by the programming language with a predefined
+          meaning. These words cannot be used as variable names (or the like) because
+          they have predetermined functionality. Inside of the parentheses is a
+          boolean expression. If the conditions inside of it are true, then the
+          code inside of the opening and closing brackets will execute. Otherwise,
+          the enclosed code will be skipped. In the previous example,
+          <span class="gold-text purple-bg">&nbsp;a&nbsp;</span> is less than 5,
+          as it was given a value of 1. Therefore the print statement on line 7 will
+          execute. Were it given a value of 7, then that code would be overlooked
+          upon execution. Using the keyword <span class="italic-text">else</span>,
+          we can insert a block of code to be run if the condition(s) for the "if
+          statement" code are false. While an "if statement" can exist independently,
+          an "else statement" cannot. This should be intuitive. Check below: <br>
+          <img src="/else.png" alt="else.png"> <br>
+          We have defined conditions inside of parentheses for the "if statement"
+          code, but we have not done so for the "else statement" code. That is because
+          the conditions for the "else statment" are implicitly defined. The code
+          inside of the "else statement" will only run if the conditions for the
+          "if statement" are false.  Note that the code to be run in this case is also
+          between opening and closing brackets. Congratulations on writing your
+          first if/else statement! Now, what if we want to specify that multiple
+          conditions must be met in order for a block of code to be executed? We
+          can use the <span class="gold-text purple-bg">&nbsp;&&&nbsp;</span> and
+          <span class="gold-text purple-bg">&nbsp;||&nbsp;</span> operators. Here
+          is an example: <br>
+          <img src="/or.png" alt="or.png"> <br>
+          For the code in the "if statement" to be executed, <span class="gold-text purple-bg">&nbsp;a&nbsp;</span>
+          must be less than 5 OR <span class="gold-text purple-bg">&nbsp;b&nbsp;</span>
+          must be equal to 10. Only one of those conditions need be true because
+          we used the "OR" operator. This should look familiar if you explored the
+          link provided in the <a href="#operators">Operators</a> section. If we
+          wanted to specify that both <span class="gold-text purple-bg">&nbsp;a&nbsp;</span>
+          must be less than AND <span class="gold-text purple-bg">&nbsp;b&nbsp;</span>
+          must be equal to 10, then we should use the "AND" operator instead. Try
+          replacing it yourself. When you do this, change the code inside of the
+          "else statement" to print a corresponding message. Also note that
+          <span class="gold-text purple-bg">&nbsp;==&nbsp;</span> is used instead
+          of the <span class="gold-text purple-bg">&nbsp;=&nbsp;</span> sign. This
+          is because the latter is used only for assignment (i.e. initializing a
+          variable), while the former is used for checking equality. Remember
+          this detail. On your own, you should learn about "else if" and "switch"
+          statements.
+        </p>
+        <hr class="line-90">
+
+      <p>Loops and Iteration</p>
+      <p class="small-font">
+        If there is a chunk of code that must be executed repeatedly, loops become
+        a convenient feature. In fact, you will find that loops are quite ubiquitous
+        in computer programming. Rather than trying to endlessly copy/paste your
+        code, you can insert it inside of a loop which will continuously execute
+        that code until some specified condition is satisfied.
+        We shall begin our discussion with the <span class="bold-text">for loop</span>.
+        A for loop will execute as many times as specified. Look at the following
+        graphic: <br>
+        <img src="/empty_for_loop.png" alt="empty_for_loop.png"> <br>
+        The header of the loop has 3 important components following the keyword
+        <span class="gold-text purple-bg">&nbsp;for&nbsp;</span> that are each underlined
+        with a different color.<br>
+        1. Underlined in green is the
+        <span class="italic-text green-text">initialization condition</span>,
+        which sets the starting point for the loop. You may either declare and
+        initialize an <span class="gold-text purple-bg">&nbsp;int&nbsp;</span>
+        here (as done above), or use an existing one. While you can use other
+        number types (i.e. a <span class="gold-text purple-bg">&nbsp;double&nbsp;</span>)
+        it is a good idea to stick with <span class="gold-text purple-bg">&nbsp;int&nbsp;</span>s.
+        <br>
+        2. Underlined in red is the <span class="italic-text red-text">test expression</span>.
+        This is a boolean expression which will be tested against using the
+        <span class="gold-text purple-bg">&nbsp;int&nbsp;</span> from your initialization
+        condition. The loop will continue to run until this expression is false.
+        <br>
+        3. Underlined in blue is the <span class="italic-text blue-text">update statement</span>.
+        This indicates to the loop how to change the value of your variable. In
+        the example above the <span class="gold-text purple-bg">&nbsp;++&nbsp;</span>
+        operator tells the loop to increment the variable by 1. <br>
+        So let's put it all together. <span class="green-text">The loop above
+        begins with <span class="gold-text purple-bg">&nbsp;i&nbsp;</span> as 0</span>,
+        <span class="blue-text">will add 1 to
+        <span class="gold-text purple-bg">&nbsp;i&nbsp;</span> every iteration</span>,
+        <span class="red-text">and cease iterating once
+        <span class="gold-text purple-bg">&nbsp;i&nbsp;</span> is no longer less
+        than 10 &mdash; in other words, when
+        <span class="gold-text purple-bg">&nbsp;i&nbsp;</span> equals 10.</span>
+        With some simple math, we find that the loop runs 10 times! Verify
+        this yourself by inserting a print statement inside of the loop that prints
+        the value of <span class="gold-text purple-bg">&nbsp;i&nbsp;</span>. Any
+        code to be "looped over" should replace the whitespace between the
+        opening and closing brackets, as shown below. <br>
+        <img src="/for_loop.png" alt="for_loop.png"> <br>
+        Your console should ouput the numbers 0 through 9 on separate lines. Be
+        careful with loops (of any kind)! If written poorly, they can iterate endlessly. Change
+        your update statement to decrement instead in order to see this for yourself.
+        Once your never ending loop starts, you will have to hit the "Stop" button
+        to halt your code's execution. Also, keep in mind that you can use larger
+        increments for your loop. The <span class="gold-text purple-bg">&nbsp;++&nbsp;</span>
+        and <span class="gold-text purple-bg">&nbsp;--&nbsp;</span> operators
+        add and subtract 1 respectively, but you can change the update statement
+        to hold <span class="gold-text purple-bg">&nbsp;i + 5&nbsp;</span> or
+        <span class="gold-text purple-bg">&nbsp;i - 3&nbsp;</span> or another number
+        instead.<br>
+        A <span class="bold-text">while loop</span> function similarly. Examine
+        the graphic below, focusing on the code inside of the yellow box.
+        <img src="/empty_while_loop.png" alt="empty_while_loop.png">
+        The header of a while loop is simple. It is the keyword
+       <span class="gold-text purple-bg">&nbsp;while&nbsp;</span> followed by
+        a boolean expression (underlined in light blue above). The loop will iterate
+        continuously while the expression evaluates to true, and terminate only when
+        it becomes false. The whitespace in this image represents the area where
+        code should be inserted. Check the image below. <br>
+        <img src="/while_loop.png" alt="while_loop.png"> <br>
+        Inside the body of the loop, you will see that line 7 increments the
+        <span class="gold-text purple-bg">&nbsp;age&nbsp;</span> variable while
+        line 8 prints its current value. Run this code. You will see that the value
+        rises by 1 starting at 0 and ending 18. After that, the console no longer prints
+        any output because the print statement is INSIDE of the loop, and the
+        loop has terminated. But why? The "if statement" inside of the loop will
+        change the value of <span class="gold-text purple-bg">&nbsp;isNotAdult&nbsp;</span>
+        to false once the value of age reaches 18. Hence, the boolean expression
+        has become false, terminating the loop. Note that if the boolean expression
+        used as a test statement is false to begin with (maybe you initialized
+        your variables with values that result in this), the loop will be skipped
+        over entirely. Remember that the loop will only run while the boolean
+        expression evaluates to true. If
+        <span class="gold-text purple-bg">&nbsp;isNotAdult&nbsp;</span> were initialized
+        as <span class="gold-text purple-bg">&nbsp;true&nbsp;</span>, this would be the case
+        here. In some cases, you may want your loop to run at least one time so
+        that you may enter the body of it regardless of such conditions. A
+        <span class="bold-text">do while loop</span> does just that; the boolean
+        expression is evaluated after the first iteration of the loop. You are
+        encouraged to read about do while loops on your own.
+        <br>
+        There are two keywords which can override the normal execution of a loop.
+        <span class="gold-text purple-bg">&nbsp;break;&nbsp;</span> will terminate
+        a loop and begin re-execution of your code just outside of it.
+        <span class="gold-text purple-bg">&nbsp;continue;&nbsp;</span> will cause
+        the loop to jump to the next iteration immediately. These commands may
+        not be too useful to you any time soon, but they are important to keep
+        in the back of your mind. <br>
+
+        What you have learned in this section is very foundational. As always,
+        you are encouraged to play around with these structures and write your
+        own simple programs with them! You will grasp them better if you do.
+      </p>
+      </div>
+      <hr class="line-90">
+
+      <div id="fizzbuzz" class="section scrollspy tech-text-padding">
+        <h2>Sample Project</h2>
+        <p class="small-font">
+          In the world of programming, concepts tend to come together once they
+          are applied in some manner. We are going to write a short program called
+          "FizzBuzz," which makes use of the concepts you have been learning.
+        </p>
+        <p>Specifications</p>
+        <p class="small-font">
+          1. The program should print integers 1-100 to the console, each on a
+          separate line, but with the following exceptions: <br>
+          2. Every number that is divisible by 3 should print "Fizz" instead.
+          <br>
+          3. Every number that is divisible by 5 should print "Buzz" instead.
+          <br>
+          4. Every number that is divisible by both 3 and 5 should print "FizzBuzz" instead.
+          <br>
+          Stop here. You should spend 20-30 minutes thinking about the problem and trying
+          to write the program on your own. Use google to discover a method for
+          finding divisibility, and the sections above this one to get as far as
+          you can independently. If you are unable to write the program, do not fret.
+          We will go through it together once you have made your independent attempt.
+          </p>
+          <p>Instructions</p>
+          <p class="small-font">
+          Lets look at specification 1. How could we print one hundred sequential
+          numbers? We could write one hundred print statements... or we could use
+          a loop! Let's use a for loop to print 1-100 to the console. Try this yourself
+          before clicking <a id="100-loop-btn" href="#">here</a> to see what it
+          would look like! <br>
+          <img id="100-loop" src="/1-100_loop.png" alt="1-100_loop.png">
+          Now that we are successfully printing 1-100 to the console, we need to
+          look at specifications 2, 3, and 4. How can we conditionally print "Fizz,"
+          "Buzz," and "FizzBuzz" to the console? Using if/else statements! We'll
+          need three of them to account for each circumstance. Use the modulus operator
+          to check for divisibility. If x mod y
+          (or <span class="gold-text purple-bg">&nbsp;x % y&nbsp;</span>) returns
+          0, then x is divisible by y, as there was no remainder from division.
+          For example, 9 mod 3 returns 0. Hence 9 is divisible by 3 because 9 divided
+          by 3 produces no remainder. Now try to write the three "if statements."
+          Once you have done that, insert appropriate print statements into their
+          respective bodies. Your code should look similar to <a id="err1-btn" href="#">this</a>.
+          <img id="err1" src="/fizzbuzz_error1.png" alt="fizzbuzz_error1.png"> Run
+          your code. You will find that there are several errors in the logic. <br>
+          <img id="err1-output" src="/fizzbuzz_error1_output.png" alt="fizzbuzz_error1_output.png">
+          Look at the green box. 15 is divisible by both 3 and 5, so your code
+          <span class="italic-text">should</span> omit the number 15 and fill its
+          spot with "FizzBuzz" instead. However, it is not replacing numbers with
+          "Fizz," "Buzz," or "FizzBuzz." It is simply printing them on the lines
+          following the number (depending on its divisibility). If you examine the
+          output, you will find that this issue occurs all throughout. Let's trace
+          the code for the 15th iteration of the loop. <br>
+          Line 4 prints the value of <span class="gold-text purple-bg">&nbsp;i&nbsp;</span>,
+          which would be 15. <br>
+          Lines 5-7 prints "Fizz" because <span class="gold-text purple-bg">&nbsp;i&nbsp;</span>
+          is divisible by 3. <br>
+          Lines 8-10 print "Buzz" because <span class="gold-text purple-bg">&nbsp;i&nbsp;</span>
+          is divisible by 5. <br>
+          And lastly, lines 11-13 print "FizzBuzz" because <span class="gold-text purple-bg">&nbsp;i&nbsp;</span>
+          is divisible by both 3 and 5. <br>
+          This is why the green box contains so much unnecassary output. We have
+          3 separate "if statements" so each conditional will be evaluated separately,
+          and the corresponding print statement(s) will be executed given the requisite
+          circumstances are fulfilled. Put another way, the code currently runs
+          a linear path and checks each "if statement." We want a branching path
+          where only a single correct option can be chosen per iteration. This can
+          be achieved using "else if." Change the last two "if statements" to "else
+          if statements." We must also account for line 4, which will unconditionally
+          &mdash; and undesirably &mdash; print an integer value regardless of divisibility.
+          Since we want <span class="gold-text purple-bg">&nbsp;i&nbsp;</span>
+          to print to the console only when none of the other conditions are met,
+          we can move this line into the body of an "else statement." Your code
+          should now look like <a id="almost-btn" href="#">this</a>:
+          <img id="almost" src="/fizzbuzz_almost.png" alt="fizzbuzz_almost.png">
+          Now run your code again. You will find that the output is still incorrect.
+          While numbers that are exclusively multiples of 3 or 5 are now replacing
+          themselves with "Fizz" or "Buzz" appropriately, numbers that are multiples
+          of 15 &mdash; numbers divisible by 3 AND 5 &mdash; are printing "Fizz"
+          even though they should print "FizzBuzz." Let's trace the code again for
+          the 15th iteration of the loop.
+
+          Lines 4-6 print "Fizz" because <span class="gold-text purple-bg">&nbsp;i&nbsp;</span>
+          is divisible by 3. But remember that your code is now a branching
+          in such a way that only a single path can be taken per iteration? This
+          is the problem, but also its solution. As mentioned earlier, programs
+          execute sequentially. This means your code is executed line-by-line according
+          to its natural chronology. Click <a id="almost-with-markup-btn" href="#">this</a>
+          and inspect the following graphic: <br>
+          <img id="almost-with-markup" src="/fizzbuzz_almost_with_markup.png" alt="fizzbuzz_almost_with_markup.png">
+          During runtime, you will enter the body of the
+          <span class="red-text">first conditional block</span> which your variable <span class="gold-text purple-bg">&nbsp;i&nbsp;</span>
+          satisfies the entry conditions of. It will then exit the entire control
+          structure, even if there are other conditionals following it that would
+          satisfy. So what would happen if you swapped the positions of the
+          <span class="red-text">conditional block 1</span> with
+          <span class="orange-text">conditional block 2</span>? Run your code. It
+          will print "Buzz" because <span class="gold-text purple-bg">&nbsp;i&nbsp;</span>
+          (being 15) would still satisfy your "new" first conditional block and enter
+          its body. After this, it will exit the whole control structure in its entirety
+          without evaluating the boolean expressions of next three conditional blocks,
+          the proceed to advance to the next iteration of the loop. But we need
+          to print "FizzBuzz," not just "Buzz." So now swap the position of your
+          "new" first conditional block with
+          <span class="darkblue-text">conditional block 3</span>. Your code should
+          now be identical to the "simple solution" posted below (or nearly so).
+          Feel free to run it and check its output against the specifications. One
+          new lesson to take from this sample project: when dealing with conditional
+          structures, the order in which they are arranged is important depending
+          on the context. Sometimes (like in this case) the most specific conditions
+          should be placed ahead of the rest.
+          </p>
+          <p>Solution</p>
+          <p class="small-font">
+            Click to see a <a id="fb-simple-btn" href="#">simple solution</a>. <br>
+            <img id="fb-simple" src="/fizzbuzz_simple.png" alt="fizzbuzz_simple.png">
+            As with many problems that can be solved by code, there is a multitude
+            of ways to achieve the same result. Some are more efficient than others.
+            The code below is meant to demonstrate this idea, although you are not
+            expected to understand the details of the code. <br>
+            Click to see a more <a id="fb-elegant-btn" href="#">elegant solution</a>.
+            <br>
+            <img id="fb-elegant" src="/fizzbuzz_elegant.png" alt="fizzbuzz_elegant.png">
+          </p>
+        </div>
+        <hr class="line-90">
+
+        <div id="comments" class="section scrollspy tech-text-padding">
+          <h2>Comments</h2>
+          <p class="small-font">
+            <span class="bold-text">Comments</span> are human-readable annotations
+            of computer code that improve comprehensibility. They are ignored by
+            compilers and interpreters (do not worry about what these are for now)
+            and thus will not execute when your program is run. Single-line comments
+            begin with <span class="gold-text purple-bg">&nbsp;//&nbsp;</span>.
+            They look like this:
+            <img src="/single_comments.png" alt="single_comments.png"> <br>
+            Multi-line comments (AKA block comments) begin with
+            <span class="gold-text purple-bg">&nbsp;/*&nbsp;</span> and end with
+            <span class="gold-text purple-bg">&nbsp;*/&nbsp;</span>. Anything between
+            those two marks will be skipped over during execution.
+            <img src="/block_comment.png" alt="block_comment.png"> <br>
+            For styling purposes, asterisks have been planted at the beginnings of
+            every line, but only the very first and last asterisks are actually
+            required. Comments can be used to inactivate lines of code. Try writing
+            a print statement inside of a comment. You will see that it does not
+            manifest during execution. This can be a helpful detail when inspecting
+            existing code for errors. For example, a section of code suspected of
+            causing a specific error can be commented out to check if the error
+            disappears when the program is run again. Assuming the error has vanished,
+            you might be on to something. If not, you can just as easily uncomment
+            the code to safely restore it. This is preferred over actually deleting
+            large chunks of code which you may wish to reinstate in the future.
+            <br>
+            More importantly, comments provide documentation which may
+            help other developers understand your code. It may
+            even help you recall your own thought processes after returning to your
+            code from a lengthy intermission. Quality documentation of your work
+            is an important task and habit to undertake. But only document as much
+            as needed. Excessive documentation can be difficult to sift through
+            for important information. An example of unneeded documentation would
+            be the single-line comments in the first image which narrate the declaration
+            and initialization of variable <span class="gold-text purple-bg">&nbsp;x&nbsp;</span>.
+            Every computer programmer knows what declaration and initialization
+            are. If you need to briefly explain the purpose of an unintuitive
+            variable or process, then you may choose to leave a comment.
+            However, code should be self-documenting (as much as possible). You
+            should strive to write code that could be easily understood by even
+            a novice programmer, and comment only when necassary. For instance,
+            variable names should be self-explanatory.
+          </p>
+        </div>
+        <hr class="line-90">
+
+        <div id="arrays" class="section scrollspy tech-text-padding">
+        <h2>Arrays</h2>
+          <p class="small-font">
+            Arrays and other data structures. Also mention off-by-1 "0 indexing" <br>
+            An <span class="bold-text">array</span> is a collection of elements (of a specified type) which can
+            each be accessed by an index. Look at the following graphic: <br>
+            <img src="/array_markup.png" alt="array_markup.png"> <br>
+            In red, the two square brackets (<span class="gold-text purple-bg">&nbsp;[]&nbsp;</span>) immediately following
+            <span class="gold-text purple-bg">&nbsp;String&nbsp;</span> indicate
+            the <span class="red-text">declaration of an array</span>. This is not
+            limited to <span class="gold-text purple-bg">&nbsp;String&nbsp;</span>s;
+            you may declare an array of <span class="gold-text purple-bg">&nbsp;int&nbsp;</span>s
+            or any other type. To do so, you would simply add trailing square brackets
+            to the type in your declaration. For example,
+            <span class="gold-text purple-bg">&nbsp;int[]&nbsp;</span>to declare
+            an array of integers. However, a single array can only hold elements
+            of the type declared. Initialization always takes the following form:
+            comma-separated elements with opening and closing curly brackets on
+            appropriate ends of the list. In the graphic above,
+            <span class="gold-text purple-bg">&nbsp;"BIO290"&nbsp;</span>,
+            <span class="gold-text purple-bg">&nbsp;"BIO483"&nbsp;</span>,
+            <span class="gold-text purple-bg">&nbsp;"CHEM242"&nbsp;</span>,
+            <span class="gold-text purple-bg">&nbsp;"CHEM242L"&nbsp;</span>,
+            <span class="gold-text purple-bg">&nbsp;"MATH220"&nbsp;</span>, and
+            <span class="gold-text purple-bg">&nbsp;"PHIL101"&nbsp;</span> are all
+            elements in the <span class="green-text">array named classes</span>,
+            and an opening curly bracket marks the beginning of it, while a closing
+            curly bracket marks the end.
+            Java will only allow you to declare and initialize arrays in a single
+            statement, so do not try to separate these procedures. If you try to,
+            you will encounter a slew of errors. Now observe the following
+            diagram: <br>
+            <a href="https://docs.oracle.com/javase/tutorial/java/nutsandbolts/arrays.html" target="_blank">
+              <img src="/array_diagram.gif" alt="array_diagram.gif" style="height:200%; width:200%;">
+            </a>
+            <br>
+            This should help you visually conceptualize an array.
+            <span class="bold-text">Elements</span> are items in the array, while
+            indices (or <span class="bold-text">indexes</span>) are the positions
+            of elements in an array (represented by integers). The ten green boxes
+            represent the ten elements of the array, while the number above a given
+            element represents the index that would be used to access that element.
+            Notice that the index of the first element is 0. This detail is crucial.
+            Array indices are offset by 1; your code must accomodate for this. <br>
+            Look back at the first image from this section. Lines 5 and 6 contain
+            print statements that each access an element at
+            <span class="darkblue-text">index 0</span> and
+            <span class="pink-text">index 2</span> respectively. The elements have
+            been underlined in matching colors to demonstrate which indices from
+            the print statements they belong to. To access a specific element from
+            an array, you must type the <span class="green-text">name of the array</span>
+            followed by its corresponding index placed inside of square brackets.
+            Use lines 5 and 6 as an example; try printing another element of your
+            own choice from the <span class="gold-text purple-bg">&nbsp;classes&nbsp;</span>
+            array. <br>
+            To alter an element in an array, access it by its index and use the
+            assignment operator (<span class="gold-text purple-bg">&nbsp;=&nbsp;</span>)
+            to give it a new value. <br>
+            <img src="/mutate_element.png" alt="mutate_element.png"> <br>
+            Here is a small project to apply this new skill. Use a "for loop" to set
+            every element of your array to an empty String. Then outside of the
+            loop, alter your array so that the elements each contain one course in
+            your current semester's class schedule. Click <a id="array-problem-btn" href="#">here</a> to
+            see a skeleton example that your code should resemble. <br>
+            <span id="array-problem">
+              <img src="/array_sample_problem.png" alt="array_sample_problem.png">
+              <br>
+              Lines 5 and 6 have been commented out for your convenience. Now, if
+              you look at the test expression of your "for loop", you will notice that
+              <span class="gold-text purple-bg">&nbsp;i &lt;= 5&nbsp;</span>. If
+              you used <br> <span class="gold-text purple-bg">&nbsp;i &lt;= 6&nbsp;</span>
+              instead, then you have fallen victim of OBOE, or off-by-one-error.
+              Remember that you must account for the offset of array elements due
+              to the 0-based indexing system. <span class="gold-text purple-bg">&nbsp;i &lt;= 6&nbsp;</span> Next, inspect line 9. Notice that
+              <span class="gold-text purple-bg">&nbsp;i&nbsp;</span> is inside of
+              the square brackets. This will change the index based upon the value
+              of <span class="gold-text purple-bg">&nbsp;i&nbsp;</span>, which will
+              run from 0 through 5 depending on the iteration. Every time the loop
+              iterates, it sets a new element of
+              <span class="gold-text purple-bg">&nbsp;classes&nbsp;</span> to an
+              empty String. Below the loop (lines 12-17), each element is assigned
+              a new value. Give each element the name of a class you are
+              taking. If you would like to confirm that you have successfully rewritten
+              the elements of your array, write another loop that prints each element.
+              If you so desire, you can use
+              <span class="gold-text purple-bg">&nbsp;i &lt; classes.length&nbsp;</span>
+              in lieu of the original test expression.
+              <span class="gold-text purple-bg">&nbsp;.length&nbsp;</span> will
+              return the length of an array, which is 6 in this case. The reason
+              you do not get a OBOE is because of the use the
+              <span class="gold-text purple-bg">&nbsp;&lt;&nbsp;</span> instead
+              of <span class="gold-text purple-bg">&nbsp;&lt;&nbsp;</span>
+              instead, you would get an error. Do not worry about how this works
+              yet. This can also be used on <span class="gold-text purple-bg">String</span>s,
+              which are simply arrays of <span class="gold-text purple-bg">char</span>s
+              (single characters) incidentally. Again, do not be anxious if this
+              does not immediately click. One last note: in Java, arrays cannot be
+              resized once initialized. Do not hold onto this detail too tightly.
+              You will be writing code in JavaScript for this lab. Arrays in JavaScript
+              are not of a fixed size.
+            </span>
+          </p>
+        </div>
+        <hr class="line-90">
+        <div id="guess" class="section scrollspy tech-text-padding">
+          <h2>Guided Project</h2>
+          <p class="small-font">
+            Let's write a short game called "Guess The Number" so we have an example
+            to discuss in the <a href="#methods">Methods</a> section. The idea behind
+            this program is that a user will be asked guess the value of a randomly
+            generated integer between 1 and 50. The program will provide hints to
+            the user if he/she guesses wrong (i.e. "Higher!" or "Lower!"). We will
+            first write this program without defining any of our own methods. Examples
+            from here on out will show variable declaration and initialization combined
+            into a single statement. Fewer shall be provided to encourage you to
+            solve the problem in your own way.
+            <br> <br>
+            1. We need to generate a random number. For this, we will have to import
+            the Random class and instantiate a new Random object. Note the the usage
+            of capitalization to denote that Random is a reference type. We have
+            not directly discussed classes, objects, or imports yet, so just follow
+            these instructions. Clear all of the code YOU have written just like
+            you were instructed to do at the start of the
+            <a href="#operators">Operators</a> section. On line 1, add
+            <span class="gold-text purple-bg">&nbsp;import java.util.Random;&nbsp;</span>
+            to import the Random class. Then hit the enter key once to create an
+            empty new line. On line 5, add
+            <span class="gold-text purple-bg">&nbsp;Random rand = new Random();&nbsp;</span>
+            to instantiate an object of the Random class. Then declare a variable
+            named <span class="gold-text purple-bg">&nbsp;generateInt&nbsp;</span>
+            and initialize it with
+            <span class="gold-text purple-bg">&nbsp;rand.nextInt(50) + 1&nbsp;</span>.
+            The nextInt() method, which belongs to the Random class, generates
+            a random number between 0 and the specified maximum value (which was
+            50). We assigned this to a variable because we want to save the value
+            for later. The value of the maximum number (which we set to 50) that
+            is specified is excluded from the range, so we add 1 to the value to
+            ensure its inclusion, and also to set the minimum value in the range
+            (originally 0) to 1. The number stored in this variable is the number
+            which the player needs to guess! <br>
+            2. We're going to do something very similar for the Scanner class. Import
+            it by adding
+            <span class="gold-text purple-bg">&nbsp;import java.util.Scanner;&nbsp;</span>
+            immediately below your first import statement. Then underneath the line
+            in which you instantiated your Random object (AKA your declaration/initialization)
+            of <span class="gold-text purple-bg">&nbsp;rand&nbsp;</span>, add
+            <span class="gold-text purple-bg">&nbsp;Scanner scan = new Scanner(System.in);&nbsp;</span>
+            You now have a Scanner class object named
+            <span class="gold-text purple-bg">&nbsp;scan&nbsp;</span> set up to
+            retrieve user input <br>
+            3. We need to prompt the user to guess a number. Add a print statement.
+            Then insert
+            <span class="gold-text purple-bg">&nbsp;int guess = scan.nextInt();&nbsp;</span>
+            following it. The nextInt() method from the Scanner class will enable
+            the user to input an <span class="gold-text purple-bg">&nbsp;int;&nbsp;</span>.
+            Once the user hits the "return" key, his/her input will be stored inside
+            of <span class="gold-text purple-bg">&nbsp;guess&nbsp;</span>.
+            The reason that this variable must be initialized beneath the print
+            statement is because code executes sequentially. We want the user to
+            be prompted for input before enabling them to type it in... not the
+            other way around! By now, your code should look similar to
+            <a id="guess-part1-btn" href="#">this</a>: <br>
+            <img id="guess-part1" src="/guess_part1.png" alt="guess_part1.png">
+            4. We now have the randomly generated number and the user's guess as
+            to what it is. We need to think about the possible outcomes.
+            If the player correctly guesses the number, the game will end. If the
+            player incorrectly guesses a number, then the program will instruct
+            the player to guess either higher or lower. Use some conditionals to
+            account for these 3 possiblities. You probably used some variation of
+            "if statements." <br>
+            5. As it is, the game will end immediately, regardless of which path
+            the program takes. We need to wrap those conditional blocks inside of
+            a loop to continuously run them until the player wins &mdash; at which
+            point the loop should exit. This will advance the program's execution
+            towards its end. We do not know how many time the loop should iterate,
+            so a "for loop" is no longer the best option. Instead, write a "while
+            loop" that encapsulates all of your conditional blocks. Declare and
+            initialize a boolean named
+            <span class="gold-text purple-bg">&nbsp;numbersMatch;&nbsp;</span> and
+            give it a value of <span class="gold-text purple-bg">&nbsp;false;&nbsp;</span>.
+            Then use <span class="gold-text purple-bg">&nbsp;!numbersMatch;&nbsp;</span>
+            as the test expression for the while loop. The "not" operator says to
+            use the opposite value of its operand, so the expression evaluates to
+            true because the original value is false. In colloquial english, the
+            header of the "while loop" could be understood as saying, "while numbers
+            DO NOT match." The "not" operator isn't always intuitive to beginners,
+            but appropriate usage will become more obvious with time. If we want
+            this loop to exit, we need the value of the test expression to become
+            false. Because we want the loop to exit only if the player guesses correctly,
+            we shall set
+            <span class="gold-text purple-bg">&nbsp;numbersMatch;&nbsp;</span>
+            to <span class="gold-text purple-bg">&nbsp;true;</span> inside of the
+            body of the conditional block which is accessed when the player correctly
+            guesses the randomly generated number. When this happens, the test
+            expression will evaluate to false, by virtue of the "not" operator.
+            <br>
+            6. We still have a problem. As is, the program will only permit the
+            player to input their guess once. However, we would like them to guess
+            as many times as needed to find the correct number. Translplant
+            <span class="gold-text purple-bg">&nbsp;int guess = scan.nextInt();&nbsp;</span>
+            into the body of the "while loop" as its first line. It is this line
+            which enables user input. Your program finished program will look something
+            like <a id="guess-part2-btn" href="">this</a>.
+            <img id="guess-part2" src="/guess_part2.png" alt="guess_part2.png"> <br> <br>
+
+            While your program has all of its desired functionality, it does not
+            account for potential errors caused by users. Input validation is important
+            in the real world. What if our user tries to enter a
+            <span class="gold-text purple-bg">&nbsp;String&nbsp;</span> or a
+            <span class="gold-text purple-bg">&nbsp;double&nbsp;</span> or an number
+            outside of 1-50? Sometimes inappropriately formed input can break your
+            program or cause errors. We can force users to supply proper input using
+            conditionals. For example, you could write an "if statement" with the
+            hasNextInt() method from the Scanner class. Look it up. I recommend
+            you try to instate some form of validation for the 3 issues listed earler.
+            Practice makes perfect.
+          </p>
+        </div>
+
+        <div id="methods" class="section scrollspy tech-text-padding">
+          <h2>Methods</h2>
+          <p class="small-font">
+            A <span class="bold-text">method</span> is a block of code that will
+            only execute if called upon. While this term is commonplace in OOP,
+            the term <span class="bold-text">function</span> is more frequently
+            used in JavaScript. There is a subtle difference in definition, but
+            for practical purposes &mdash; yours &mdash; they can be treated synonymously.
+            <br>
+            Methods increase the reusability, maintainability, and comprehensibility
+            of code. In the previous section, you used methods provided by the Java
+            API to write your program. In layman's terms, you used methods that
+            were predefined and provided for you. Look at the following
+            graphic, but do not try to emulate it. We are now going to discuss the
+            creation and use of our own methods.
+            <img src="/readability.png" alt="readability.png"> <br>
+            The code is largely the same, but all of the conditional blocks are gone.
+            In the green box, you will see that
+            <span class="gold-text purple-bg">&nbsp;numbersMatch&nbsp;</span> is
+            assigned differently. It is assigned with a method, similar to the way
+            <span class="gold-text purple-bg">&nbsp;generateInt&nbsp;</span> and
+            <span class="gold-text purple-bg">&nbsp;guess&nbsp;</span> are. However,
+            it is given the value of the method named compare(), which takes in both
+            of the variables we just mentioned. If you look at the statement as
+            a whole, you may be able to deduce what is happening. The user's guess
+            is being compared (hence the name of the method) to the value of the
+            randomly generated number, and the variable which dictates the coninuation
+            of the loop is set by whether or not the compare() method returns true
+            or false. Can you already see how this improves comprehensibility?
+            Now, lets look at the code for the compare() method.
+            <img src="/compare_method.png" alt="compare_method.png">
+            Note that it begins at line 17 (while the previous graphic ends at line
+            16). All of this was written in the same file. Line 17 displays the
+            method header. Let's break it down step-by-step.
+            <span class="gold-text purple-bg">&nbsp;public&nbsp;</span> is the access
+            modifier. For your purposes, we will overlook this element.
+            <span class="gold-text purple-bg">&nbsp;static&nbsp;</span>
+            denotes that the method is static in nature. Again, we can ignore this.
+            <span class="gold-text purple-bg">&nbsp;boolean&nbsp;</span> is the
+            return type of the method. It indicates that the method will return
+            a boolean value.
+            <span class="gold-text purple-bg">&nbsp;compare&nbsp;</span> is the
+            name of the method. <span class="gold-text purple-bg">&nbsp;int guess&nbsp;</span>
+            is the first parameter, and
+            <span class="gold-text purple-bg">&nbsp;int generateInt&nbsp;</span>
+            is the second parameter. Parameters are essentially external inputs
+            required by a method. The compare() method requires two inputs when used,
+            as you may have noticed from the green box in the first graphic.
+
+            <span class="bold-text">Arguments</span> are the specific data you pass
+            into a parameter.
+
+            Lines 18-30 are the body. This is where we do any necassary manipulations,
+            including those done on our parameters. You may have noticed that our
+            conditional blocks were relocated into the method, with some slight
+            alterations. The user's guess is taken in through the parameter and
+            compared with the randomly generated number which is also taken in through
+            the parameter. At the bottom of the method is a return statement which
+            must return a boolean value, as the return type in the header indicates.
+            It is this value which is given to our variable
+            <span class="gold-text purple-bg">&nbsp;numbersMatch&nbsp;</span> from
+            the first graphic. That is how we control the loop which contains our
+            method call to compare(). The idea is that every method must
+            boil down into a value of some data type. This is not entirely true, but
+            assume it is for explanation's sake. We can then take this value and
+            use it for whatever purpose we need. Hence, a method is basically a
+            block of code which takes in data (when appropriate) and returns some
+            value acquired by manipulating said data. They should be named according
+            to their purpose. Look at the graphic below:
+            <img src="/method_calls.png" alt="method_calls.png">
+            In the context of the program, there is no real purpose for the extra
+            method calls to compare(). It just makes it easier to talk about. We
+            could have copy/pasted the all of the conditional blocks in place of
+            each method call. But doesn't that sound messy? Methods improve readability,
+            which improves comprehensibility. Not to mention, the code becomes easily
+            reusable. It is much easier to make the 3 method calls than paste the
+            corresponding code repeatedly and hope that it works. In this way, the
+            code is also more maintainable. If you recognized an error during operation
+            of the method, you only need to fix it inside of the method body. This i
+            mprovement will then show up everywhere you have made your method call.
+            Imagine ten method calls; tt would be significantly more error prone
+            and time consuming to directly make that same change to code which was
+            copy/pasted 10x.
+          </p>
+        </div>
+        <hr class="line-90">
+
+        <div id="classes-objects" class="section scrollspy tech-text-padding">
+          <h2>Classes and Objects</h2>
+          <p class="small-font">
+            Classes and Objects are unfortunately difficult to grasp, and best are
+            perhaps best understood through extensive exposure and practice. In
+            this section, the concepts will be introduced with little opportunity
+            for practice. While mastery is ideal, a superficial understanding
+            should suffice for your purposes. A <span class="bold-text">class</span>
+            is a blueprint for an <span class="bold-text">object</span>. A class
+            is an abstracted representation of some "thing" that forms a template
+            for the creation of concrete instances of said "thing." A class has
+            attributes &mdash; variables inside of the class which describe the
+            relevant qualities and state of the "thing." A class also has methods,
+            which describe the behaviors of the "thing." An example may be easier
+            to visualize. Suppose you have a class named Person. It may have a name
+            attribute, an age atrribute, a height arribute, and whatever other attributes
+            are important for objects of this class to have. This class may also
+            have methods like a printName() method which prints the name attribute
+            given to an object (of the class), or a birthday() method which increments
+            the age attribute by 1. A Person class object may be given a name attribute
+            of "John" an age "attribute" of 20. The video below breaks down the
+            classes and objects in simple terms using a different example. <br>
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/8yjkWGRlUmY" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            <br>
+            It is important to recognize that in some cases, an object of a class
+            does not need to be instantiated (AKA created) to use its methods. Under
+            such circumstances, you can simply use the class name followed by the
+            <span class="gold-text purple-bg">&nbsp;.&nbsp;</span> operator and
+            the method name to complete the method call. <br> <br>
+
+            Hopefully by now you have at least a vague appreciation of classes and
+            objects. Some other important (and more advanced) topics that you may
+            choose to pursue independently are inheritance, encapsulation, and
+            abstraction. However, your current level of comprehension should suffice
+            for the work done in this lab.
+          </p>
+        </div>
+  </div>
+
+      <!--Display TOC on right side-->
+      <div class="col hide-on-med-and-down s6 m2 l1 xl10">
+        <div class="toc-wrapper pinned">
+          <ul class="section table-of-contents margin-r15">
+            <li><a href="#basics-intro" class="white-text">Introduction</a></li>
+            <li><a href="#variables" class="white-text">Variables</a></li>
+            <li><a href="#types" class="white-text">Data Types</a></li>
+            <li><a href="#literals" class="white-text">Literals</a></li>
+            <li><a href="#syntax" class="white-text">Syntax</a></li>
+            <li><a href="#operators" class="white-text">Operators</a></li>
+            <li><a href="#control-flow" class="white-text">Control Flow</a></li>
+            <li><a href="#fizzbuzz" class="white-text">Sample Project</a></li>
+            <li><a href="#comments" class="white-text">Comments</a></li>
+            <li><a href="#arrays" class="white-text">Arrays</a></li>
+            <li><a href="#guess" class="white-text">Guided Project</a></li>
+            <li><a href="#methods" class="white-text">Methods </a></li>
+            <li><a href="#classes-objects" class="white-text">Classes and Objects</a></li>
+          </ul>
+          <div class="center">
+            <p class="white-text flow-text roboto quote">
+              "For the things we have to learn before we can do them, we learn by
+              doing them." <br>
+              -Aristotle</p>
+          </div>
+          <a href="/technology/languages" class="waves-effect waves-light btn-large gold-bg center">Continue</a>
+        </div>
+    </div>  <!--End of row div-->
+</template>

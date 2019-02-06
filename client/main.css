@@ -1,0 +1,314 @@
+body {
+  height: 1000px;
+  background-color: grey;
+  font-family: sans-serif;
+}
+
+h1 {
+  font-size: 55px;
+  font-weight: bold;
+}
+
+p {
+  font-size: 20px;
+}
+
+img {
+  max-height: auto;
+  max-width: 100%;
+  padding-top: 10px;
+}
+
+iframe {
+  justify-content: center;
+}
+
+span.white-text::before {
+  background-color: rgb(50,30,145,0.9);
+}
+/*
+span.checked.white-text::before {
+  background-color: rgb(70,40,155,0);
+}
+*/
+.background {
+  background-image: url(https://i.pinimg.com/originals/55/11/bd/5511bd2dfd62b07fe30cbc0fa837317b.jpg);
+  height: 100%;
+  width: 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.background-contents {
+  padding-top: 5px;
+  padding-left: 40px;
+  padding-right: 40px;
+  padding-bottom: 30px;
+  color: white;
+}
+
+.menu {
+  padding-left: 30px;
+}
+
+.account-input {
+  background-color: rgb(50,30,145,0.9);
+  color: white;
+}
+
+.profile-margins {
+  margin-bottom: 5px;
+  margin-left: 25px;
+}
+
+.margin-t15 {
+  margin-top: 15px;
+}
+
+.margin-r15 {
+  margin-right: 15px
+}
+
+.roboto {
+  font-family: 'Roboto condensed';
+}
+
+.white-bottom {
+  border-bottom-color: white;
+}
+
+.bold-text {
+  font-weight: bold;
+}
+
+.italic-text {
+  font-style: italic;
+}
+
+.underline-text {
+  text-decoration: underline;
+}
+
+.white-text {
+  color: white;
+}
+
+.purple-text {
+  color: purple;
+}
+
+.red-text {
+  color: #d32f2f !important;
+}
+
+.darkblue-text {
+  color: #304ffe;
+}
+
+.gold-text {
+  color: gold;
+}
+
+.tech-text-padding {
+  padding-left: 25px;
+  padding-right: 25px;
+  padding-bottom: 10px;
+}
+
+.tech-bg {
+  margin-top: 35px;
+  width: auto;
+  padding: 1px 1px 1px 1px;
+  background-color: white;
+  color: purple;
+  opacity: 0.95;
+}
+
+.gold-bg {
+  background-color: rgb(255,200,0);
+  /*background-color: gold;*/
+}
+
+.purple-bg {
+  background-color: purple;
+}
+
+.purplish-bg {
+  background-color: rgb(70,40,155);
+}
+
+.small-font {
+  font-size: 17px
+}
+
+.center {
+   width: 180px;
+   margin-left: 20px;
+   margin-right: 20px;
+   margin-bottom: 20px;
+   word-wrap: break-word;
+}
+
+.divider {
+  background-color: rgb(50,20,135);
+}
+
+.line-90 {
+  width: 90%;
+}
+
+.btn-disabled {
+  transition-property: background-color;
+}
+
+.btn-disabled:hover {
+  background-color: rgb(225,225,225);
+  color: rgb(160,160,160);
+}
+
+.datepicker-date-display {
+  background-color: rgb(70,40,155,0.9);
+  /*background-color: rgb(50,30,145,0.9);*/
+}
+
+.datepicker-day-button {
+  color: rgb(173,156,101);
+}
+
+.datepicker-table td.is-selected {
+  background-color: rgb(244,239,225);
+}
+
+.datepicker-controls .select-month input {
+  width: 80px;
+  text-align: right;
+}
+
+.datepicker-footer {
+  visibility: hidden;
+  height: 15px;
+}
+
+.toc-wrapper {
+  top: 103px;
+  right: 40px;
+  background-color: rgb(60,34,132);
+}
+
+.nav-login-logout {
+  margin-right: 40px;
+}
+
+/**/
+#back-to-login-link, .login-link-text {
+  visibility: hidden;
+}
+
+.login-close-text, .login-button, .additional-link-container {
+  display: none;
+}
+/**/
+
+.create-forgot-forms-margins {
+  /*margin-top: 15px;*/
+  padding-top: 50px;
+  margin-left: 25px;
+  margin-bottom: 10px;
+}
+
+.additional-links-margins {
+  margin-top: -20px;
+  margin-left: 25px;
+  margin-bottom: 25px;
+}
+
+.accounts-dialog {
+  display: block;
+  padding: 15px;
+  margin: 15px;
+}
+
+.fade-in {
+  opacity: 1;
+}
+
+.accounts-dialog, .login-form, .login-form-sign-in, .fade-in, .login-bg {
+  -webkit-animation: fadein 0.75s; /* Safari, Chrome and Opera > 12.1 */
+  -moz-animation: fadein 0.75s; /* Firefox < 16 */
+  -ms-animation: fadein 0.75s; /* Internet Explorer */
+  -o-animation: fadein 0.75s; /* Opera < 12.1 */
+  animation: fadein 0.75s;
+}
+
+@keyframes fadein {
+  from { opacity: 0; }
+  to   { opacity: 0.95; }
+}
+
+/* Firefox < 16 */
+@-moz-keyframes fadein {
+  from { opacity: 0; }
+  to   { opacity: 0.95; }
+}
+
+/* Safari, Chrome and Opera > 12.1 */
+@-webkit-keyframes fadein {
+  from { opacity: 0; }
+  to   { opacity: 0.95; }
+}
+
+/* Internet Explorer */
+@-ms-keyframes fadein {
+  from { opacity: 0; }
+  to   { opacity: 0.95; }
+}
+
+/* Opera < 12.1 */
+@-o-keyframes fadein {
+  from { opacity: 0; }
+  to   { opacity: 0.95; }
+}
+
+.quote {
+  font-size: 20px;
+}
+
+#nav {
+  background-color: rgb(70,40,155,0.9);
+}
+
+#nav-content li > a {
+  font-size: 15px;
+  color: white;
+}
+
+#dropdown {
+  position: absolute;
+  right: 1222px;
+  top: -64px;
+  background-color: rgb(60,34,132);
+}
+
+#login-bg {
+  margin-top: 40px;
+  background-color: white;
+  opacity: 0.95;
+}
+
+#account-bg {
+  margin-top: 40px;
+  width: auto;
+  background-color: white;
+  opacity: 0.95;
+}
+
+#login-btn, #create-btn, #forgot-btn {
+  margin-top: -15px;
+  margin-left: 25px;
+  margin-bottom: 25px;
+}
+
+#login-password {
+  margin-bottom: 15px;
+}
